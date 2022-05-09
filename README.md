@@ -12,5 +12,24 @@ This project is an analysis of the Oahu's weather dataset to identify the weathe
 
 
 ## Analysis Results
+The temperature and precipitation data in this dataset was collected during year 2010 to 2017 from 9 different weather stations across Oahu Island, Hawaii. The following images show the outputs of the measurement table and station table overview retrieving from the sqlite dataset.
 
-## Summary
+
+<img src= to-be-put-link width="50%" height="50%">
+<img src= to-be-put-link width="50%" height="50%">
+
+This analysis focuses on the temperature in June and December to have the year-round overview of the temperature trends.
+
+### 1. June Temperature
+
+<img src= to-be-put-link width="50%" height="50%">
+
+
+### 2. December Temperature
+
+<img src= to-be-put-link width="50%" height="50%">
+
+
+## Analysis Summary
++ Results Summary
++ Two additional queries to gather more data for June and December:
