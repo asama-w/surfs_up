@@ -14,22 +14,26 @@ This project is an analysis of the Oahu's weather dataset to identify the weathe
 ## Analysis Results
 The temperature and precipitation data in this dataset was collected during year 2010 to 2017 from 9 different weather stations across Oahu Island, Hawaii. The following images show the outputs of the measurement table and station table overview retrieving from the sqlite dataset.
 
++ **Measurement table**:
+The column names in the image are id, station, date, prcp, tobs, respectively.
 
-<img src= to-be-put-link width="50%" height="50%">
-<img src= to-be-put-link width="50%" height="50%">
+<img src= https://github.com/asama-w/surfs_up/blob/main/Additional_Images/measurement_table_output.png width="50%" height="50%">
+
++ **Station table**:
+The column names in the image are id, station, name, latitude, longitude, elevation, respectively.
+
+<img src= https://github.com/asama-w/surfs_up/blob/main/Additional_Images/station_table_output.png width="55%" height="55%">
 
 This analysis focuses on the temperature in June and December to have the year-round overview of the temperature trends.
 
-### 1. June Temperature
+### June Temperature VS December Temperature
 
-<img src= to-be-put-link width="50%" height="50%">
-
-
-### 2. December Temperature
-
-<img src= to-be-put-link width="50%" height="50%">
+<img src= https://github.com/asama-w/surfs_up/blob/main/Additional_Images/June_Temps.png width="21%" height="21%"><img src= https://github.com/asama-w/surfs_up/blob/main/Additional_Images/Dec_Temps.png width="25%" height="25%">
 
 
 ## Analysis Summary
 + Results Summary
 + Two additional queries to gather more data for June and December:
+
+<img src= to-be-put-link width="50%" height="50%">
+<img src= to-be-put-link width="50%" height="50%">
