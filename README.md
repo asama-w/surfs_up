@@ -39,13 +39,13 @@ This analysis focuses on the temperature in June and December to have the year-r
 
 3. **Data Dispersion:** December's temperature data is slightly more spread out than June's data (lightly higher standard deviation)
   + The maximum temperatures of June and Dec are relatively similar (2 °F difference)
-  + June: min temp = 64, max temp = 85, standard deviation = 3.26
-  + December: min temp = 56, max = 83, standard deviation = 3.75
+  + June: min temp = 64 °F, max temp = 85 °F, standard deviation = 3.26
+  + December: min temp = 56 °F, max = 83 °F, standard deviation = 3.75
 
 
 ## Analysis Summary
 ### 1. Results Summary:
-  + There is no extreme change in temperature when compared the months of June and December together. It can almost be equally hot in December as in June (maximum temperature is 83 and 85). There is a slightly higher difference in lowest temperatures of 8 F, December month feels cooler than June, but with no abrupt change in temperature.
+  + There is no extreme change in temperature when compared the months of June and December together. It can almost be equally hot in December as in June (maximum temperature is 83 °F and 85 °F). There is a slightly higher difference in lowest temperatures of 8 °F, December month feels cooler than June, but with no abrupt change in temperature.
   + This analysis only looked at how the temperature summary of June and December. However, the real temperature, or the feel-like temperature might differ depends on the weather conditions, such as warmer-feel on sunny days, cooler-feel on cloudy or rainy days.
   + Overall, it can be concluded from this temperature summary analysis that the year-round temperature, which is on the warmer side, is favorable for the Surf n' Shake shop, as there are warm days in December as well as in the mid-year month, and lowest temperature is not extreme, might not feel as cool if there is the sunshine.
   + This analysis only focuses on the summary statistics of temperature (mean, median, max, min). Additional analysis on the Oahu's weather may needed to see the trends over the years.
