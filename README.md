@@ -30,10 +30,57 @@ This analysis focuses on the temperature in June and December to have the year-r
 
 <img src= https://github.com/asama-w/surfs_up/blob/main/Additional_Images/June_Temps.png width="21%" height="21%"><img src= https://github.com/asama-w/surfs_up/blob/main/Additional_Images/Dec_Temps.png width="25%" height="25%">
 
+1. **Data count:** There are 1,700 temperature data for June and 1,517 data for December. 
+  + June's temperature data in the database is collected from 2010 to 2017.
+  + December's temperature data in the database is collected from 2010 to 2016 (no temperature data for the year 2017).
+
+2. **Average temperature:** The difference in the average temperature between June and December is 3.4 °F
+  + June's average temperature is 74.94 °F and December's average temperature is 71.04 °F
+
+3. **Data Dispersion:** December's temperature data is slightly more spread out than June's data (lightly higher standard deviation)
+  + The maximum temperatures of June and Dec are relatively similar (2 °F difference)
+  + June: min temp = 64, max temp = 85, standard deviation = 3.26
+  + December: min temp = 56, max = 83, standard deviation = 3.75
+
 
 ## Analysis Summary
-+ Results Summary
-+ Two additional queries to gather more data for June and December:
+### 1. Results Summary:
+  + There is no extreme change in temperature when compared the months of June and December together. It can almost be equally hot in December as in June (maximum temperature is 83 and 85). There is a slightly higher difference in lowest temperatures of 8 F, December month feels cooler than June, but with no abrupt change in temperature.
+  + This analysis only looked at how the temperature summary of June and December. However, the real temperature, or the feel-like temperature might differ depends on the weather conditions, such as warmer-feel on sunny days, cooler-feel on cloudy or rainy days.
+  + Overall, it can be concluded from this temperature summary analysis that the year-round temperature, which is on the warmer side, is favorable for the Surf n' Shake shop, as there are warm days in December as well as in the mid-year month, and lowest temperature is not extreme, might not feel as cool if there is the sunshine.
+  + This analysis only focuses on the summary statistics of temperature (mean, median, max, min). Additional analysis on the Oahu's weather may needed to see the trends over the years.
+  
+### 2. Two additional queries to gather more data for June and December:
 
-<img src= to-be-put-link width="50%" height="50%">
-<img src= to-be-put-link width="50%" height="50%">
+The additional queries are in the [SurfsUp_Challenge.ipynb](https://github.com/asama-w/surfs_up/blob/main/SurfsUp_Challenge.ipynb) following the challenge's code.
+
+  1. **Precipitation Data:** Get the precipitation data for June and December to determine the year-round rainfalls.
+
+example of the code:
+```python
+# June precipitation data
+june_prcp = session.query(Measurement.date, Measurement.prcp).\
+    filter(extract("month", Measurement.date) == "6").\
+    order_by(Measurement.date).all()
+
+# convert to DataFrame
+june_prcp_df = pd.DataFrame(june_prcp, columns = ['Date', 'June Precipitation']).set_index('Date')
+```
+ <img src= https://github.com/asama-w/surfs_up/blob/main/Additional_Images/June_Precipitation.png width="20%" height="20%"><img src= https://github.com/asama-w/surfs_up/blob/main/Additional_Images/Dec_Precipitation.png width="20%" height="20%">
+  
+  2. **Average Precipitation per Station:** Determine the average precipitation per Station for June and December. As there 9 different stations, we can determine the more specific location for the shop that have the most suitable weather trends for the shop.
+
+example of the code:
+```python
+# June precipitation data per station
+june_prcp_by_station = session.query(Measurement.station, func.avg(Measurement.prcp)).\
+    filter(extract("month", Measurement.date) == "6").\
+    group_by(Measurement.station).\
+    order_by(Measurement.station).all()
+    
+# Covert to DataFrame
+june_prcp_by_station_df = pd.DataFrame(june_prcp_by_station, columns = ['Station', 'June Avg Precipitation']).set_index('Station')
+june_prcp_by_station_df
+```
+
+<img src= https://github.com/asama-w/surfs_up/blob/main/Additional_Images/Avg_prcp_by%20_station_June.png width="20%" height="20%"><img src= https://github.com/asama-w/surfs_up/blob/main/Additional_Images/Avg_prcp_by%20_station_Dec.png width="20%" height="20%">
