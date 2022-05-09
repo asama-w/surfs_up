@@ -49,6 +49,9 @@ This analysis focuses on the temperature in June and December to have the year-r
   + This analysis only looked at how the temperature summary of June and December. However, the real temperature, or the feel-like temperature might differ depends on the weather conditions, such as warmer-feel on sunny days, cooler-feel on cloudy or rainy days.
   + Overall, it can be concluded from this temperature summary analysis that the year-round temperature, which is on the warmer side, is favorable for the Surf n' Shake shop, as there are warm days in December as well as in the mid-year month, and lowest temperature is not extreme, might not feel as cool if there is the sunshine.
   + This analysis only focuses on the summary statistics of temperature (mean, median, max, min). Additional analysis on the Oahu's weather may needed to see the trends over the years.
+  + The following chart shows the temperature in the months of June and December.
+ 
+<img src= https://github.com/asama-w/surfs_up/blob/main/Additional_Images/Temps_chart.png width="50%" height="50%">
   
 ### 2. Two additional queries to gather more data for June and December:
 
@@ -84,3 +87,4 @@ june_prcp_by_station_df
 ```
 
 <img src= https://github.com/asama-w/surfs_up/blob/main/Additional_Images/Avg_prcp_by%20_station_June.png width="20%" height="20%"><img src= https://github.com/asama-w/surfs_up/blob/main/Additional_Images/Avg_prcp_by%20_station_Dec.png width="20%" height="20%">
+
